@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+struct bill {
+    char item [50];
+    float price;
+    int quantity;
+};
+
+void credit();
+
+int main ()
+{
+  credit();
+  return 0;
+}
+
+void credit (){
+
+    bill a1;
+
+    cout << "Enter item name: ";
+    cin.get(a1.item, 50);
+    cout << "Enter the price of the item: ";
+    cin >> a1.price;
+    cout << "Enter the quantity of the item: ";
+    cin >> a1.quantity;
+
+    cout << "\nBill Information.\n";
+    cout << "\nItem: " << a1.item;
+    cout <<"\nPrice: " << a1.price;
+    cout << "\nQuantity: " << a1.quantity;
+
+    cout << "\nAmount Payable." << endl;
+    cout << (a1.price * a1.quantity);
+
+    }
+
